@@ -11,10 +11,12 @@
   window.Marquee3k = function(options) {
     var options = options || {};
     var selector = options.selector || '.marquee3k';
+    var spacing = options.spacing || '30px';
     var marquees = document.querySelectorAll(selector);
     var winWidth = window.innerWidth;
 
-    document.addEventListener('DOMContentLoaded', init);
+
+    init();
     window.addEventListener('resize', onResize);
 
 
@@ -39,8 +41,8 @@
 
         // Set marquee properties
         marquee.position = 0;
-        marquee.content = marqueeContent + '&nbsp;';
-        marquee.props = marquee.getBoundingClientRect();
+        marquee.vertical = marquee.dataset.vertical;
+        marquee.content = marqueeContent;
         marquee.direction = marquee.dataset.reverse ? 1 : -1;
         marquee.speed = (marquee.dataset.speed ? (marquee.dataset.speed / 60) : (50/60)) * marquee.direction;
         marquee.delay = 0;
@@ -53,6 +55,8 @@
 
         // Insert content and create a clone
         marqueeElem.innerHTML = marquee.content;
+        marqueeElem.style.display = 'inline-block';
+        marqueeElem.style.paddingRight = spacing;
         marqueeElemClone = marqueeElem.cloneNode(true);
 
         // Append first copy
@@ -79,7 +83,7 @@
           marquee.classList.add('marquee3k--vertical');
           marquee.style.width = marquee.contentHeight + 'px';
           marquee.style.height = '100%';
-          marqueeContentWrap.style.transform = marquee.rotation;
+          marqueeContentWrap.style.transform = 'rotate(-90deg)';
 
           if (!marquee.dataset.reverse) {
             marqueeContentWrap.style.transformOrigin = '0% 0%';
@@ -106,6 +110,7 @@
         }
 
         marquee.style.visibility = 'visible';
+        marquee.classList.add('is-ready');
       }
 
       animate();
@@ -122,7 +127,7 @@
         if (marquee.delay < marquee.dataset.delay * 60) {
             marquee.delay += 1;
         } else {
-          if (!marquee.dataset.vertical) {
+          if (!marquee.vertical) {
             if (marquee.dataset.reverse) {
               if (marquee.position >= marquee.contentWidth) marquee.position = 0;
             } else {
