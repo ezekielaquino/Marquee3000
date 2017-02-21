@@ -43,13 +43,15 @@ Super smooth and versatile javaScript plugin with no dependencies.
 
 ### Options
 
-You can set additional configuration options
+You can set additional configuration options.
 
     ``` js
         Marquee3k({
             selector: '.selector-name', // define a custom classname
             randomSpeed: bool // if true, each marquee will be assigned a random speed between 10-50px/sec
         });
+
+Marquee also adds a `is-ready` selector. You can use this to add and toggle entrance transitions, for example.
 
 ### To Do
 - Pause the animation if a marquee is out of the viewport
