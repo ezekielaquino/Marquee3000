@@ -26,7 +26,9 @@ Super smooth and versatile javaScript plugin with no dependencies.
 
     ``` html
         <script src="marquee3k.min.js"></script>
+        
 2. Create an element with a `.marquee3k` class. You can pass different options such as speed, orientation and direction (optional). See below for options.
+
     ``` html
         <div class="marquee3k" 
             data-speed="60" → speed in pixels/sec (default: 50)
@@ -38,7 +40,9 @@ Super smooth and versatile javaScript plugin with no dependencies.
             or any kind of html -->
             <img src="trumpet.jpg" />
         </div>
+        
 3. Fill it up with text or images etc. (still finding out what you can do with it)
+
 4. In your js file or `<script>` just call `Marquee3k()` and you're all set!
 
 ### Options
