@@ -28,7 +28,7 @@ look of em. So this is me trying to update them for 2017.
 
 ## Usage
 
-1. Include Marquee3000 in your html file.
+1. Include Marquee3000 in your html file. Download zip or install via `npm install marquee3000`
 
     ```html
         <script src="marquee3k.min.js"></script>
