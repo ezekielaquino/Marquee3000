@@ -14,6 +14,7 @@ Super smooth and versatile javaScript plugin with no dependencies.
 - Set orientation, speed and direction
 - Have hundreds without any slowdown
 - Automatically adjusts if window is scaled up
+- Marquee only animates if it's in the viewport
 
 <sup>*</sup>we'll find out more
 
@@ -58,7 +59,6 @@ You can set additional configuration options.
 Marquee also adds a `is-ready` selector. You can use this to add and toggle entrance transitions, for example.
 
 ### To Do
-- Pause the animation if a marquee is out of the viewport
 - Make it play well with type plugins such as lettering.js or some other scripts
 - Some basic implementation of callbacks
 
