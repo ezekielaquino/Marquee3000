@@ -110,6 +110,7 @@
           marqueeContentWrapWidth += marquee.contentWidth;
         }
 
+        marquee.isPaused = !isInViewport(marquee);
         marquee.style.visibility = 'visible';
         marquee.classList.add('is-ready');
       }
@@ -179,6 +180,9 @@
     }
 
 
+    /**
+     * CHECK IF IN VIEWPORT
+     */
     function onScroll() {
       debounce(function() {
         for (var i = 0; i < marquees.length; i++) {
