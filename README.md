@@ -27,6 +27,7 @@ Super smooth and versatile javaScript plugin with no dependencies.
 
     ``` html
         <script src="marquee3k.min.js"></script>
+     ```
         
 2. Create an element with a `.marquee3k` class. You can pass different options such as speed, orientation and direction (optional). See below for options.
 
@@ -41,6 +42,7 @@ Super smooth and versatile javaScript plugin with no dependencies.
             or any kind of html -->
             <img src="trumpet.jpg" />
         </div>
+    ```
         
 3. Fill it up with text or images etc. (still finding out what you can do with it)
 
@@ -55,6 +57,7 @@ You can set additional configuration options.
             selector: '.selector-name', // define a custom classname
             randomSpeed: bool // if true, each marquee will be assigned a random speed between 10-50px/sec
         });
+     ```
 
 Marquee also adds a `is-ready` selector. You can use this to add and toggle entrance transitions, for example.
 
