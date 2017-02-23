@@ -17,8 +17,6 @@
 
 
     init();
-    window.addEventListener('resize', onResize);
-    window.addEventListener('scroll', onScroll);
 
 
     /**
@@ -116,6 +114,11 @@
       }
 
       animate();
+
+      // Resize - add more items if width < window width
+      // Scroll - Pause and play if marquee is in viewport
+      window.addEventListener('resize', onResize);
+      window.addEventListener('scroll', onScroll);
     }
 
 
@@ -219,7 +222,9 @@
 
 
 
-
+  /**
+   * WAYPOINT
+   */
   function isInViewport(element) {
     var rect = element.getBoundingClientRect();
     var html = document.documentElement;
