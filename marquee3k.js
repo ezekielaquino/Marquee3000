@@ -40,11 +40,13 @@
 
         // Set marquee properties
         marquee.position = 0;
-        marquee.vertical = marquee.dataset.vertical;
         marquee.content = marqueeContent;
+        marquee.vertical = marquee.dataset.vertical;
+        marquee.reverse = marquee.dataset.reverse;
         marquee.direction = marquee.dataset.reverse ? 1 : -1;
         marquee.speed = (marquee.dataset.speed ? (marquee.dataset.speed / 60) : (50/60)) * marquee.direction;
-        marquee.delay = 0;
+        marquee.delay = marquee.dataset.delay * 60 || 0;
+        marquee._delay = 0;
 
         // Random speed
         if (options.randomSpeed && !marquee.dataset.speed) {
@@ -78,13 +80,13 @@
         marqueeContentWrapWidth = marqueeContentWrap.offsetWidth;
 
         // Set conditional styling (vertical / reversed)
-        if (marquee.dataset.vertical) {
+        if (marquee.vertical) {
           marquee.classList.add('marquee3k--vertical');
           marquee.style.width = marquee.contentHeight + 'px';
           marquee.style.height = '100%';
           marqueeContentWrap.style.transform = 'rotate(-90deg)';
 
-          if (!marquee.dataset.reverse) {
+          if (!marquee.reverse) {
             marqueeContentWrap.style.transformOrigin = '0% 0%';
             marqueeContentWrap.style.left = 0;
             marqueeContentWrap.style.top = '100%';
@@ -96,7 +98,7 @@
         } else {
           marqueeContentWrap.style.top = 'calc(50% - ' + (marquee.contentHeight / 2) + 'px)';
 
-          if (marquee.dataset.reverse) {
+          if (marquee.reverse) {
             marqueeContentWrap.style.right = 0;
           }
         }
@@ -129,11 +131,11 @@
       for (var i = 0; i < marquees.length; i++) {
         var marquee = marquees[i];
 
-        if (marquee.delay < marquee.dataset.delay * 60) {
-            marquee.delay += 1;
+        if (marquee._delay < marquee.delay) {
+            marquee._delay += 1;
         } else if (!marquee.isPaused) {
           if (!marquee.vertical) {
-            if (marquee.dataset.reverse) {
+            if (marquee.reverse) {
               if (marquee.position >= marquee.contentWidth) marquee.position = 0;
             } else {
               if (marquee.position <= marquee.contentWidth * -1) marquee.position = 0;
@@ -142,7 +144,7 @@
             marquee.position += marquee.speed;
             marquee.children[0].style.transform = 'translate3d(' + marquee.position + 'px, 0, 0)';
           } else {
-            if (marquee.dataset.reverse) {
+            if (marquee.reverse) {
               if (marquee.position <= marquee.contentWidth * -1) marquee.position = 0;
             } else {
               if (marquee.position >= marquee.contentWidth) marquee.position = 0;
