@@ -41,7 +41,8 @@ look of em. So this is me trying to update them for 2017.
             data-speed="60" → speed in pixels/sec (default: 50)
             data-reverse="bool" → default: R to L / T to B
             data-vertical="bool" → [def] horizontal or [true] vertical
-            data-delay="2" → Initial pause before animating (in sec)>
+            data-delay="2" → Initial pause before animating (in sec)
+            data-pausable="bool" → Pause marquee on hover> 
             MARQUEE3000
             <!--you can even have inline images,
             or any kind of html -->

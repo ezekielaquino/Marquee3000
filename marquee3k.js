@@ -43,6 +43,7 @@
         marquee.content = marqueeContent;
         marquee.vertical = marquee.dataset.vertical;
         marquee.reverse = marquee.dataset.reverse;
+        marquee.pausable = marquee.dataset.pause;
         marquee.direction = marquee.dataset.reverse ? 1 : -1;
         marquee.speed = (marquee.dataset.speed ? (marquee.dataset.speed / 60) : (50/60)) * marquee.direction;
         marquee.delay = marquee.dataset.delay * 60 || 0;
@@ -113,6 +114,17 @@
         marquee.isPaused = !isInViewport(marquee);
         marquee.style.visibility = 'visible';
         marquee.classList.add('is-ready');
+
+        // Add event listeners if marquee is pausable on hover
+        if (marquee.pausable) {
+          marquee.addEventListener('mouseenter', function() {
+            marquee.isPaused = true;
+          });
+
+          marquee.addEventListener('mouseleave', function() {
+            marquee.isPaused = false;
+          });
+        }
       }
 
       animate();
