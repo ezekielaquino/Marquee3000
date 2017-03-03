@@ -72,6 +72,10 @@ Marquee also adds a `is-ready` selector. You can use this to add and toggle entr
 - Some basic implementation of callbacks
 - More play options
 
+### Changes in 0.0.2 (Bear with me with the versioning)
+
+- Marquees now take the width (horizontal) or the height (vertical) of its parent element if it is set. Otherwise, it will just take the width/height of the viewport.
+
 ### Questions
 
 **Q: But it's slow, I have 150+ of them on the same page**
