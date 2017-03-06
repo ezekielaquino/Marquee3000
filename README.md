@@ -42,7 +42,9 @@ look of em. So this is me trying to update them for 2017.
             data-reverse="bool" → default: R to L / T to B
             data-vertical="bool" → [def] horizontal or [true] vertical
             data-delay="2" → Initial pause before animating (in sec)
-            data-pausable="bool" → Pause marquee on hover> 
+            data-pausable="bool" → Pause marquee on hover
+            data-hover="bool" → Play marquee on hover
+            dadta-callback="functionName" → function called every cycle>
             MARQUEE3000
             <!--you can even have inline images,
             or any kind of html -->
@@ -72,9 +74,10 @@ Marquee also adds a `is-ready` selector. You can use this to add and toggle entr
 - Some basic implementation of callbacks
 - More play options
 
-### Changes in 0.0.2 (Bear with me with the versioning)
+### Changes in 0.0.3 (Bear with me with the versioning)
 
-- Marquees now take the width (horizontal) or the height (vertical) of its parent element if it is set. Otherwise, it will just take the width/height of the viewport.
+- Marquees can now take a onComplete/restart callback by passing `data-callback="functionName"`
+- `data-hover` only plays marquee on hover
 
 ### Questions
 
@@ -101,6 +104,10 @@ A: Umm, sure. Well you can do anything with it really *Demo coming soon*
 **Q: I have more questions, what's your support hotline?**
 
 A: 1-800-MARQUEE or you can just mention me on twitter (@the_ezekiel)
+
+**Q: the callback does not work?
+
+A: You have to pass in only the name of the function (must be defined in global scope). Still currently a very basic implementation. Suggestions welcome!
 
 
 ## Say hi!
