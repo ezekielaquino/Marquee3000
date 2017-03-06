@@ -72,7 +72,7 @@
         marquee.style.overflow = 'hidden';
         marquee.style.visibility = 'hidden';
         marquee.style.position = 'relative';
-        marquee.style.width = marquee.parentElement.offsetWidth || window.innerWidth + 'px';
+        marquee.style.width = (marquee.parentElement.offsetWidth || window.innerWidth) + 'px';
         marquee.style.height = marquee.contentHeight + 'px';
 
         // We make at least two copies (e.g. for LARGE elements, only needs two)
@@ -85,7 +85,7 @@
         if (marquee.vertical) {
           marquee.classList.add('marquee3k--vertical');
           marquee.style.width = marquee.contentHeight + 'px';
-          marquee.style.height = marquee.parentElement.offsetHeight || window.innerHeight + 'px';
+          marquee.style.height = (marquee.parentElement.offsetHeight || window.innerHeight) + 'px';
           marqueeContentWrap.style.transform = 'rotate(-90deg)';
 
           if (!marquee.reverse) {
