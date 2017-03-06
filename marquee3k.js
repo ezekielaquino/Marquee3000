@@ -41,10 +41,10 @@
         // Set marquee properties
         marquee.position = 0;
         marquee.content = marqueeContent;
-        marquee.vertical = marquee.dataset.vertical;
-        marquee.reverse = marquee.dataset.reverse;
-        marquee.pausable = marquee.dataset.pausable;
-        marquee.direction = marquee.dataset.reverse ? 1 : -1;
+        marquee.vertical = (marquee.dataset.vertical == 'true');
+        marquee.reverse = (marquee.dataset.reverse == 'true');
+        marquee.pausable = (marquee.dataset.pausable == 'true');
+        marquee.direction = marquee.reverse ? 1 : -1;
         marquee.speed = (marquee.dataset.speed ? (marquee.dataset.speed / 60) : (50/60)) * marquee.direction;
         marquee.delay = marquee.dataset.delay * 60 || 0;
         marquee._delay = 0;
