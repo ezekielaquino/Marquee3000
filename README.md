@@ -44,7 +44,7 @@ look of em. So this is me trying to update them for 2017.
             data-delay="2" → Initial pause before animating (in sec)
             data-pausable="bool" → Pause marquee on hover
             data-hover="bool" → Play marquee on hover
-            dadta-callback="functionName" → function called every cycle>
+            data-callback="functionName" → function called every cycle>
             MARQUEE3000
             <!--you can even have inline images,
             or any kind of html -->
@@ -60,12 +60,10 @@ look of em. So this is me trying to update them for 2017.
 
 You can set additional configuration options.
 
-    ```js
-        Marquee3k({
-            selector: '.selector-name', // define a custom classname
-            randomSpeed: bool // if true, each marquee will be assigned a random speed between 10-50px/sec
-        });
-     ```
+    Marquee3k({
+        selector: '.selector-name', // define a custom classname
+        randomSpeed: bool // if true, each marquee will be assigned a random speed between 10-50px/sec
+    });
 
 Marquee also adds a `is-ready` selector. You can use this to add and toggle entrance transitions, for example.
 
