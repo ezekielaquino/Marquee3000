@@ -1,0 +1,10 @@
+{
+  "name": "marquee3000",
+  "version": "0.0.3",
+  "description": "Internet marquees in HD!",
+  "keywords": ["marquee", "marquees"],
+  "repository": "https://github.com/ezekielaquino/Marquee3000",
+  "homepage": "https://ezekielaquino.github.io/Marquee3000/",
+  "author": "Ezekiel Aquino <ezekielaquino@gmail.com>",
+  "dependencies": {}
+}
