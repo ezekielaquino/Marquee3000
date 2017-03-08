@@ -9,7 +9,8 @@
   'use strict';
 
   window.Marquee3k = function(options) {
-    var options = options || {};
+    options = options || {};
+
     var selector = options.selector || '.marquee3k';
     var spacing = options.spacing || '30px';
     var marquees = document.querySelectorAll(selector);
@@ -29,7 +30,7 @@
         var marqueeContentWrap = document.createElement('div');
         var marqueeElem = document.createElement('span');
         var marqueeContentWrapWidth = 0;
-        var marqueeElemClone, marqueeElemWidth;
+        var marqueeElemClone;
 
         // Style the inner wrapper
         marquee.innerHTML = '';
@@ -160,7 +161,7 @@
         var callback = window[marquee.callback];
 
         if (marquee._delay < marquee.delay) {
-            marquee._delay += 1;
+          marquee._delay += 1;
         } else if (!marquee.isPaused) {
           if (!marquee.vertical) {
             if (marquee.reverse) {
@@ -238,7 +239,7 @@
 
 
     // MARQUEE 3000™
-  }
+  };
 
 
   /**
@@ -256,7 +257,7 @@
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
-  };
+  }
 
 
 
