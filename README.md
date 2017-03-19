@@ -63,7 +63,8 @@ You can set additional configuration options.
     Marquee3k({
         selector: '.selector-name', // define a custom classname
         randomSpeed: bool, // if true, each marquee will be assigned a random speed between 10-50px/sec
-        spacing: 30, // number in px, space between copies - defaults to 30
+        resizeDebounce: 500, // in ms, defaults to 500ms
+        spacing: 30 // number in px, space between copies - defaults to 30
     });
 
 Marquee also adds a `is-ready` selector. You can use this to add and toggle entrance transitions, for example.

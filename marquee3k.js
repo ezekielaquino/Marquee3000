@@ -69,7 +69,7 @@
 
         // Save initial width / height
         marquee.contentWidth = marqueeContentWrap.offsetWidth;
-        marquee.contentHeight = marqueeContentWrap.offsetHeight;
+        marquee.contentHeight = getHeight(marquee);
 
         // Set marquee elem style
         marquee.style.overflow = 'hidden';
@@ -200,8 +200,24 @@
     /**
      * RESIZE
      */
+    function resize() {
+      for (var n = 0; n < marquees.length; n++) {
+        var marquee = marquees[n];
+        var marqueeContentWrap = marquee.children[0];
+
+        marquee.contentWidth = marqueeContentWrap.children[0].offsetWidth;
+        marquee.contentHeight = getHeight(marquee);
+        marquee.style.width = marquee.parentElement.offsetWidth || window.innerWidth + 'px';
+        marquee.style.height = marquee.contentHeight + 'px';
+        marqueeContentWrap.style.top = 'calc(50% - ' + (marquee.contentHeight / 2) + 'px)';
+      }
+    }
+
+
     function onResize() {
       debounce(function() {
+        resize();
+
         if (window.innerWidth > winWidth) {
           for (var i = 0; i < marquees.length; i++) {
             var marquee = marquees[i];
@@ -218,7 +234,21 @@
 
           winWidth = window.innerWidth;
         }
-      }, 1000);
+      }, options.resizeDebounce || 500);
+    }
+
+
+    // get height of tallest element
+    function getHeight(marquee) {
+      var children = marquee.children[0].children;
+
+      children = Array.from(children);
+
+      children = children.map(function(elem) {
+        return elem.offsetHeight;
+      });
+
+      return Math.max(...children);
     }
 
 
