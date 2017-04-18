@@ -179,7 +179,7 @@
             }
 
             marquee.position += marquee.speed;
-            marquee.children[0].style.transform = 'translate3d(' + marquee.position + 'px, 0, 0)';
+            marquee.children[0].style.transform = 'translate(' + marquee.position + 'px, 0) translateZ(0)';
           } else {
             if (marquee.reverse) {
               if (marquee.position <= marquee.contentWidth * -1) marquee.position = 0;
@@ -188,7 +188,7 @@
             }
 
             marquee.position -= marquee.speed;
-            marquee.children[0].style.transform = 'translate3d(0, ' + marquee.position + 'px, 0) rotate(-90deg)';
+            marquee.children[0].style.transform = 'translate(0, ' + marquee.position + 'px) translateZ(0) rotate(-90deg)';
           }
         }
       }
@@ -306,7 +306,6 @@
       rect.right <= (window.innerWidth || html.clientWidth) || window.getComputedStyle(element, null).getPropertyValue('position') == 'fixed'
     );
   }
-
 
 
 
