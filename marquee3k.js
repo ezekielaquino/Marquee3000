@@ -43,8 +43,7 @@
       this.parent.style.overflowX = 'hidden';
       this.wrapper = document.createElement('div');
       this.wrapper.classList.add('marquee3k__wrapper');
-      this.wrapStyles = 'white-space: nowrap;';
-      this.wrapper.setAttribute('style', this.wrapStyles);
+      this.wrapper.style.whiteSpace = 'nowrap';
     }
 
     _setupContent() {
@@ -92,8 +91,8 @@
           else this.offset = this.contentWidth * -1;
         }
 
-        this.wrapper.setAttribute('style', `${this.wrapStyles} transform: translate3d(${this.offset}px, 0, 0);
-        `);
+        this.wrapper.style.whiteSpace = 'nowrap';
+        this.wrapper.style.transform = `translate3d(${this.offset}px, 0, 0)`;
       }
     }
 
