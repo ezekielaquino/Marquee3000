@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Internet marquees in HD!",
   "keywords": ["marquee", "marquees"],
+  "main": "marquee3k.js",
   "repository": "https://github.com/ezekielaquino/Marquee3000",
   "homepage": "https://ezekielaquino.github.io/Marquee3000/",
   "author": "Ezekiel Aquino <ezekielaquino@gmail.com>",
