@@ -69,6 +69,10 @@ look of em. So this is me trying to update them for 2017.
         }
     ```
 
+### Important
+
+If you are using images or custom fonts, initialise Marquee3000 AFTER they have been loaded!
+
 ### Options
 
 You can set additional configuration options.
