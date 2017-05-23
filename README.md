@@ -28,9 +28,9 @@ look of em. So this is me trying to update them for 2017.
 1. Include Marquee3000 in your html file. Download zip or install via `bower install marquee3000` || `npm install marquee3000`
 
     ```js
-        const Marquee3k = require('Marquee3k');
+        const Marquee3k = require('marquee3000');
         // or
-        import Marquee3k from 'Marquee3k';
+        import Marquee3k from 'marquee3000';
     ```
 
 
