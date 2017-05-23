@@ -76,10 +76,9 @@
     }
 
     _createClone() {
-      const clone = document.createElement('span');
+      const clone = this.content.cloneNode(true);
       clone.style.display = 'inline-block';
-      clone.classList.add(`${this.selector}__copy`)
-      clone.innerHTML = this.innerContent;
+      clone.classList.add(`${this.selector}__copy`);
       this.wrapper.appendChild(clone);
     }
 
