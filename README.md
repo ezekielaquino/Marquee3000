@@ -48,13 +48,26 @@ look of em. So this is me trying to update them for 2017.
 
 4. In your js file or `<script>` just call `Marquee3k.init()` and you're all set!
 
+5. To set spacing and other wonderful things, please use css
+
+    ```css
+        // Parent container of a .marquee3k element
+        .diagonal-marquee {
+            transform: rotate(45deg);
+        }
+
+        .marquee3k__copy {
+            padding-right: 30px;
+            box-sizing: border-box;
+        }
+    ```
+
 ### Options
 
 You can set additional configuration options.
 
     Marquee3k.init({
         selector: '.selector-name', // define a custom classname
-        spacing: '30px' // number + units (rem, etc), space between copies - defaults to 30
     });
 
 Marquee also adds a `is-init` selector. You can use this to add and toggle entrance transitions, for example.
