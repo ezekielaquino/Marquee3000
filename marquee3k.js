@@ -92,7 +92,7 @@
         }
 
         this.wrapper.style.whiteSpace = 'nowrap';
-        this.wrapper.style.transform = `translate3d(${this.offset}px, 0, 0)`;
+        this.wrapper.style.transform = `translate(${this.offset}px, 0) translateZ(0)`;
       }
     }
 
