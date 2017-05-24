@@ -11,6 +11,10 @@ but they're slow and you can't really do much with them.
 So much you can do with the inherently strong typographic
 look of em. So this is me trying to update them for 2017.
 
+# New Version : Important!
+
+Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
+
 ## Features
 - ~3kb minified with no dependencies
 - Turn any element into a smooth-as-butter marquee
