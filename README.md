@@ -15,6 +15,11 @@ look of em. So this is me trying to update them for 2017.
 
 Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 
+## New in 1.0.5
+
+- refresh single marquee instance / all marquees
+- access Marquee instances globally
+
 ## Features
 - ~3kb minified with no dependencies
 - Turn any element into a smooth-as-butter marquee
@@ -71,6 +76,19 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
             padding-right: 30px;
             box-sizing: border-box;
         }
+    ```
+
+### New stuff
+
+You can refresh (if width of the inner content changes dynamically) by:
+
+    ```js
+        // Refresh all instances
+        Marquee3k.refreshAll();
+
+        // or, since all marquees are available
+        // globally, target a specific instance
+        Marquee3k.refresh(index); // index of marquee
     ```
 
 ### Important
