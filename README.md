@@ -15,8 +15,9 @@ look of em. So this is me trying to update them for 2017.
 
 Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 
-## New in 1.0.5
+## New in 1.0.6
 
+- fixes bug when reverse scrolling is true
 - refresh single marquee instance / all marquees
 - access Marquee instances globally
 
