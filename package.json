@@ -1,6 +1,6 @@
 {
   "name": "marquee3000",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Internet marquees in HD!",
   "keywords": ["marquee", "marquees"],
   "main": "marquee3k.js",

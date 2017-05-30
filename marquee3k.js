@@ -40,7 +40,6 @@
     }
 
     _setupWrapper() {
-      this.parent.style.overflowX = 'hidden';
       this.wrapper = document.createElement('div');
       this.wrapper.classList.add('marquee3k__wrapper');
       this.wrapper.style.whiteSpace = 'nowrap';
