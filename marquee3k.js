@@ -115,28 +115,28 @@
     }
 
     static refreshAll() {
-      for (const marquee of MARQUEES) {
-        marquee._refresh();
+      for (let i = 0; i < MARQUEES.length; i++) {
+        MARQUEES[i]._refresh();
       }
     }
 
     static init(options = { selector: 'marquee3k' }) {
       window.MARQUEES = [];
-      const marquees = document.querySelectorAll(`.${options.selector}`);
+      const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
       let previousWidth = window.innerWidth;
       let timer;
 
       for (let i = 0; i < marquees.length; i++) {
         const marquee = marquees[i];
         const instance = new Marquee3k(marquee, options);
-       MARQUEES.push(instance);
+        MARQUEES.push(instance);
       }
 
       animate();
 
       function animate() {
-        for (const instance of MARQUEES) {
-          instance.animate();
+        for (let i = 0; i < MARQUEES.length; i++) {
+          MARQUEES[i].animate();
         }
         window.requestAnimationFrame(animate);
       }
@@ -148,8 +148,8 @@
           const isLarger = previousWidth < window.innerWidth;
           const difference = window.innerWidth - previousWidth;
 
-          for (const instance of MARQUEES) {
-            instance.repopulate(difference, isLarger);
+          for (let i = 0; i < MARQUEES.length; i++) {
+            MARQUEES[i].repopulate(difference, isLarger);
           }
 
           previousWidth = this.innerWidth;
