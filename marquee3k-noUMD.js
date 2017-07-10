@@ -113,7 +113,7 @@ class Marquee3k {
 
   static init(options = { selector: 'marquee3k' }) {
     window.MARQUEES = [];
-    const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
+    const marquees = Array.from(document.querySelectorAll(`${options.selector}`));
     let previousWidth = window.innerWidth;
     let timer;
 
