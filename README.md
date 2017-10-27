@@ -11,6 +11,8 @@ but they're slow and you can't really do much with them.
 So much you can do with the inherently strong typographic
 look of em. So this is me trying to update them for 2017.
 
+A GSAP dependent version is available (WIP): [MARQUEE3G](http://github.com/ezekielaquino/Marquee3G)
+
 # New Version : Important!
 
 Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
