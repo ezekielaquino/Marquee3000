@@ -85,14 +85,12 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 
 You can refresh (if width of the inner content changes dynamically) by:
 
-    ```js
-        // Refresh all instances
-        Marquee3k.refreshAll();
-
-        // or, since all marquees are available
-        // globally, target a specific instance
-        Marquee3k.refresh(index); // index of marquee
-    ```
+```js
+    Marquee3k.refreshAll(); // Refresh all instances
+    // or, since all marquees are available
+    // globally, target a specific instance
+    Marquee3k.refresh(index) // index of marquee
+```
 
 ### Important
 
@@ -102,9 +100,11 @@ If you are using images or custom fonts, initialise Marquee3000 AFTER they have 
 
 You can set additional configuration options.
 
+```js
     Marquee3k.init({
         selector: '.selector-name', // define a custom classname
-    });
+    });
+```
 
 Marquee also adds a `is-init` selector. You can use this to add and toggle entrance transitions, for example.
 
