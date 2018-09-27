@@ -120,8 +120,10 @@
       }
     }
 
-    static toggle() {
-      this.paused = !this.paused;
+    static toggleAll() {
+      for (let i = 0; i < MARQUEES.length; i++) {
+        MARQUEES[i].paused = !MARQUEES[i].paused;
+      }
     }
 
     static init(options = { selector: 'marquee3k' }) {
