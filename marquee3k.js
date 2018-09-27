@@ -120,6 +120,10 @@
       }
     }
 
+    static toggle() {
+      this.paused = !this.paused;
+    }
+
     static init(options = { selector: 'marquee3k' }) {
       window.MARQUEES = [];
       const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
