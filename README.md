@@ -39,7 +39,7 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 
 1. Include Marquee3000 in your html file. Download zip or install via `bower install marquee3000` || `npm install marquee3000`
 
-    ```js
+    ```javascript
         const Marquee3k = require('marquee3000');
         // or
         import Marquee3k from 'marquee3000';
@@ -59,7 +59,7 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
             data-pausable="bool" → Pause marquee on hover>
             <!--you can even have inline images,
             or any kind of html -->
-            <h1>Some marquee content</h2>
+            <h1>Some marquee content</h1>
         </div>
     ```
         
@@ -83,13 +83,53 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 
 ### New stuff
 
+#### Refresh
+
 You can refresh (if width of the inner content changes dynamically) by:
 
-```js
-    Marquee3k.refreshAll(); // Refresh all instances
+```javascript
+    // Refresh all instances
+    Marquee3k.refreshAll();
+
     // or, since all marquees are available
     // globally, target a specific instance
-    Marquee3k.refresh(index) // index of marquee
+    Marquee3k.refresh(index); // index of marquee
+```
+    
+#### Pause
+
+You can stop the animation by:
+
+```javascript
+    // Refresh all instances
+    Marquee3k.pauseAll();
+
+    // or target a specific instance
+    Marquee3k.pause(index); // index of marquee
+```
+
+#### Play
+
+You can start the animation after being paused by:
+
+```javascript
+    // Refresh all instances
+    Marquee3k.playAll();
+
+    // or target a specific instance
+    Marquee3k.play(index); // index of marquee
+```
+
+#### Toggle
+
+You can toggle the animation by:
+
+```javascript
+    // Refresh all instances
+    Marquee3k.toggleAll();
+
+    // or target a specific instance
+    Marquee3k.toggle(index); // index of marquee
 ```
 
 ### Important
@@ -100,10 +140,10 @@ If you are using images or custom fonts, initialise Marquee3000 AFTER they have 
 
 You can set additional configuration options.
 
-```js
+```javascript
     Marquee3k.init({
         selector: '.selector-name', // define a custom classname
-    });
+    });
 ```
 
 Marquee also adds a `is-init` selector. You can use this to add and toggle entrance transitions, for example.
