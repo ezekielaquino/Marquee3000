@@ -1,6 +1,6 @@
 # MARQUEE3000
 
-Marquees for the new millenium ✨
+Marquees for the new millennium ✨
 
 Super smooth and versatile javaScript plugin with no dependencies.
 
