@@ -7,6 +7,8 @@
 
 'use strict';
 
+let animationId = 0;
+
 class Marquee3k {
   constructor(element, options) {
     this.element = element;
@@ -142,6 +144,8 @@ class Marquee3k {
   }
 
   static init(options = { selector: 'marquee3k' }) {
+    if (animationId) window.cancelAnimationFrame(animationId);
+
     window.MARQUEES = [];
     const marquees = Array.from(document.querySelectorAll(`${options.selector}`));
     let previousWidth = window.innerWidth;
@@ -160,7 +164,7 @@ class Marquee3k {
         MARQUEES[i].animate();
       }
 
-      window.requestAnimationFrame(animate);
+      animationId = window.requestAnimationFrame(animate);
     }
 
     window.addEventListener('resize', () => {
