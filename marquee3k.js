@@ -1,7 +1,7 @@
 /**
  * MARQUEE 3000 MARQUEE 3000 MARQUEE 3000 MARQUEE 3000 MARQUEE 3000
  * http://github.com/ezekielaquino/marquee3000
- * Marquees for the new millenium v1.0
+ * Marquees for the new millennium v1.0
  * MIT License
  */
 
@@ -116,9 +116,39 @@
       MARQUEES[index]._refresh();
     }
 
+    static pause(index) {
+      MARQUEES[index].paused = true;
+    }
+
+    static play(index) {
+      MARQUEES[index].paused = false;
+    }
+
+    static toggle(index) {
+      MARQUEES[index].paused = !MARQUEES[index].paused;
+    }
+
     static refreshAll() {
       for (let i = 0; i < MARQUEES.length; i++) {
         MARQUEES[i]._refresh();
+      }
+    }
+
+    static pauseAll() {
+      for (let i = 0; i < MARQUEES.length; i++) {
+        MARQUEES[i].paused = true;
+      }
+    }
+
+    static playAll() {
+      for (let i = 0; i < MARQUEES.length; i++) {
+        MARQUEES[i].paused = false;
+      }
+    }
+
+    static toggleAll() {
+      for (let i = 0; i < MARQUEES.length; i++) {
+        MARQUEES[i].paused = !MARQUEES[i].paused;
       }
     }
 
