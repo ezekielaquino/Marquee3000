@@ -187,8 +187,8 @@
           }
 
           previousWidth = this.innerWidth;
-        });
-      }, 250);
+        }, 250);
+      });
     }
   }
 
