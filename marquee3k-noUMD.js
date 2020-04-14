@@ -147,7 +147,7 @@ class Marquee3k {
     if (animationId) window.cancelAnimationFrame(animationId);
 
     window.MARQUEES = [];
-    const marquees = Array.from(document.querySelectorAll(`${options.selector}`));
+    const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
     let previousWidth = window.innerWidth;
     let timer;
 
