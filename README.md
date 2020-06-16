@@ -1,9 +1,8 @@
 # MARQUEE3000
 
-**Note**
-```
-This module is now a human toddler's age! I'm super happy that it has been of use to a lot of people and it's seen around some really cool websites scattered around the web. Apologies if I don't offer support aside from tending to reports of breaking bugs. I am however thinking of revisiting this module sometime soon (fingers crossed) because it 3 years in js land is already last millenium.
-```
+**Note 16.6.2020**
+This module is now a human toddler's age! I'm super happy that it hasbeen of use to a lot of people and it's seen around some really cool websites scattered around the web. Apologies if I don't offer support aside from tending to reports of breaking bugs. I am however thinking of revisiting this module sometime soon (fingers crossed) because it 3 years in js land is already last millenium.
+___
 
 Marquees for the new millennium ✨
 
