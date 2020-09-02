@@ -100,15 +100,12 @@
       this.contentWidth = this.content.offsetWidth;
     }
 
-    repopulate(difference, isLarger) {
+    repopulate(difference) {
       this.contentWidth = this.content.offsetWidth;
+      const amount = Math.ceil(difference / this.contentWidth) + 1;
 
-      if (isLarger) {
-        const amount = Math.ceil(difference / this.contentWidth) + 1;
-
-        for (let i = 0; i < amount; i++) {
-          this._createClone();
-        }
+      for (let i = 0; i < amount; i++) {
+        this._createClone();
       }
     }
 
@@ -179,14 +176,13 @@
         clearTimeout(timer);
 
         timer = setTimeout(() => {
-          const isLarger = previousWidth < window.innerWidth;
           const difference = window.innerWidth - previousWidth;
 
           for (let i = 0; i < MARQUEES.length; i++) {
-            MARQUEES[i].repopulate(difference, isLarger);
+            MARQUEES[i].repopulate(difference);
           }
 
-          previousWidth = this.innerWidth;
+          previousWidth = window.innerWidth;
         }, 250);
       });
     }
