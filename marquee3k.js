@@ -1,7 +1,7 @@
 /**
  * MARQUEE 3000 MARQUEE 3000 MARQUEE 3000 MARQUEE 3000 MARQUEE 3000
  * http://github.com/ezekielaquino/marquee3000
- * Marquees for the new millenium v1.0
+ * Marquees for the new millennium v1.0
  * MIT License
  */
 
@@ -15,6 +15,8 @@
   }
 }(this, function() {
   'use strict';
+
+  let animationId = 0;
 
   class Marquee3k {
     constructor(element, options) {
@@ -151,6 +153,8 @@
     }
 
     static init(options = { selector: 'marquee3k' }) {
+      if (animationId) window.cancelAnimationFrame(animationId);
+
       window.MARQUEES = [];
       const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
       let previousWidth = window.innerWidth;
@@ -168,7 +172,7 @@
         for (let i = 0; i < MARQUEES.length; i++) {
           MARQUEES[i].animate();
         }
-        window.requestAnimationFrame(animate);
+        animationId = window.requestAnimationFrame(animate);
       }
 
       window.addEventListener('resize', () => {
@@ -183,8 +187,8 @@
           }
 
           previousWidth = this.innerWidth;
-        });
-      }, 250);
+        }, 250);
+      });
     }
   }
 

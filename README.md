@@ -1,6 +1,10 @@
 # MARQUEE3000
 
-Marquees for the new millenium ✨
+**Note 16.6.2020**
+This module is now a human toddler's age! I'm super happy that it has been of use to a lot of people and it's seen in use creatively around some really cool websites on the web in the last years. Apologies if I don't offer support aside from tending to reports related to breaking bugs. I am however thinking of revisiting this module sometime soon (fingers crossed) because 3 years in js land `is` a millenium.
+___
+
+Marquees for the new millennium ✨
 
 Super smooth and versatile javaScript plugin with no dependencies.
 
@@ -33,7 +37,7 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 - Responsive!
 
 ## Demo
-[MARQUEE3000 DEMO MARQUEE3000 DEMO MARQUEE3000 DEMO](https://ezekielaquino.github.io/Marquee3000/)
+[MARQUEE3000 DEMO MARQUEE3000 DEMO MARQUEE3000 DEMO](https://ezekielaquino.com/marquee)
 
 ## Usage
 
