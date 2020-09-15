@@ -183,6 +183,13 @@ A: 1-800-MARQUEE or you can just mention me on twitter (@the_ezekiel)
 
 A: You have to pass in only the name of the function (must be defined in global scope). Still currently a very basic implementation. Suggestions welcome!
 
+## Showcase
+Sites using Marquee3000!
+
+If you're using Marquee3k and had fun with it, please consider creating a PR and adding your site into the list <3
+
+- [https://stillwater-sparkling.com](https://stillwater-sparkling.com)
+
 
 ## Say hi!
 The plugin is completely free but I'd love to know if you have used the plugin for something cool! Would love to see what you've made! Drop me a line at ezekielaquino@gmail.com or via @the_ezekiel on Twitter!
