@@ -189,7 +189,11 @@ Sites using Marquee3000!
 If you're using Marquee3k and had fun with it, please consider creating a PR and adding your site into the list <3
 
 - [https://stillwater-sparkling.com](https://stillwater-sparkling.com)
-- [https://foundation.app/](Foundation)
+- [https://foundation.app/](https://foundation.app/)
+- [https://blazetype.eu/](https://blazetype.eu/)
+- [https://clanupstairs.com/](https://clanupstairs.com/)
+- [http://www.indexartbookfair.com/](http://www.indexartbookfair.com/)
+- [https://hlebozavod9.ru/](https://hlebozavod9.ru/)
 
 
 ## Say hi!
