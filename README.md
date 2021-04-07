@@ -37,7 +37,7 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 - Responsive!
 
 ## Demo
-[MARQUEE3000 DEMO MARQUEE3000 DEMO MARQUEE3000 DEMO](https://ezekielaquino.com/marquee)
+[MARQUEE3000 DEMO MARQUEE3000 DEMO MARQUEE3000 DEMO](https://ezekielaquino.com/2019/marquee)
 
 ## Usage
 
