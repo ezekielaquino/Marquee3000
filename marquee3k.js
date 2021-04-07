@@ -20,6 +20,11 @@
 
   class Marquee3k {
     constructor(element, options) {
+
+      if (element.children.length === 0) {
+        throw new Error("Encountered a marquee element without children, please supply a wrapper for your content");
+      }
+
       this.element = element;
       this.selector = options.selector;
       this.speed = element.dataset.speed || 0.25;
