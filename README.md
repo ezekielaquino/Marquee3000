@@ -190,10 +190,12 @@ If you're using Marquee3k and had fun with it, please consider creating a PR and
 
 - [https://stillwater-sparkling.com](https://stillwater-sparkling.com)
 - [https://foundation.app/](https://foundation.app/)
-- [https://blazetype.eu/](https://blazetype.eu/)
 - [https://clanupstairs.com/](https://clanupstairs.com/)
 - [http://www.indexartbookfair.com/](http://www.indexartbookfair.com/)
 - [https://hlebozavod9.ru/](https://hlebozavod9.ru/)
+- [https://theface.com](https://theface.com)
+- [https://blazetype.eu](https://blazetype.eu)
+- [https://ccsparis.com](https://ccsparis.com)
 
 
 ## Say hi!
