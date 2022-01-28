@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "Internet marquees in HD!",
   "keywords": ["marquee", "marquees"],
+  "types": "marquee3k.d.ts",
   "main": "marquee3k.js",
   "repository": "https://github.com/ezekielaquino/Marquee3000",
   "homepage": "https://ezekielaquino.github.io/Marquee3000/",
