@@ -197,6 +197,7 @@ If you're using Marquee3k and had fun with it, please consider creating a PR and
 - [https://blazetype.eu](https://blazetype.eu)
 - [https://ccsparis.com](https://ccsparis.com)
 - [https://documenta-fifteen.de/en/](https://documenta-fifteen.de/)
+- [https://gt-planar.com/](https://gt-planar.com/)
 
 
 ## Say hi!
