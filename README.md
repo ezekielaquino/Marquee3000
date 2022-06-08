@@ -74,7 +74,7 @@ Please change how you initialize form Marquee3k() -> Marquee3k.init() !!!
 5. To set spacing and other wonderful things, please use css
 
     ```css
-        // Parent container of a .marquee3k element
+        /* Parent container of a .marquee3k element */
         .diagonal-marquee {
             transform: rotate(45deg);
         }
